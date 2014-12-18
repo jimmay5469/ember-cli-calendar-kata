@@ -1,7 +1,43 @@
 # Calendar-kata
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+![calendar image](http://i67.photobucket.com/albums/h309/jimmay5469/39bfc4a3-ae1c-4aef-89eb-e46165fec97f.png)
+
+## Instructions
+
+The goal of this kata is to produce the calendar control above using ember and ember-cli.
+
+You could clone this repo and get started right away but I think there is some value in learning how to setup ember-cli using the setup instructions below.
+
+Once you finish the setup instructions below you are on your own.  I would recommend working on `Helpful Periods` first and then moving on to the `Date Range` input text boxes.
+
+## Setup
+
+Getting started
+* `npm install -g ember-cli`
+* `npm install -g bower`
+* `npm install -g phantomjs`
+* `ember new calendar-kata`
+
+Installing dependencies
+* Moment.js ([ember-cli-moment](https://www.npmjs.com/package/ember-cli-moment))
+	* `npm install --save-dev ember-cli-moment`
+	* add `"moment"` to the `predef` section of `.jshintrc`
+* [jquery-date-range-picker](https://github.com/longbill/jquery-date-range-picker)
+	* place `.js` and `.css` in vendor folder
+	* copy `Brocfile.js` code
+
+Creating calendar component
+* `ember generate component date-range-picker`
+* copy `app/components/date-range-picker.js` code
+* copy `app/templates/components/date-range-picker.hbs` code
+* copy `app/templates/application.hbs` code
+
+Running site
+* `ember server`
+* visit `http://localhost:4200`
+
+
+# Ember CLI stuff
 
 ## Prerequisites
 
@@ -47,4 +83,5 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
 
