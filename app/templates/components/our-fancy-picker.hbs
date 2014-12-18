@@ -1,0 +1,27 @@
+<h4>Our Fancy Picker!!</h4>
+<ul>
+  <li>
+    <button {{action selectLast7 on="click"}}>Select last 7 days</button>
+  </li>
+  <li>
+    <button {{action selectLast30 on="click"}}>Select last 30 days</button>
+  </li>
+  <li>
+    <button {{action setThisWeek on="click"}}>Set this week</button>
+  </li>
+  <li>
+    <button {{action setLastWeek on="click"}}>Set last week</button>
+  </li>
+  <li>
+    <button {{action setLastMonth on="click"}}>Set last month</button>
+  </li>
+</ul>
+{{date-range-picker startDate=start endDate=end}}
+<label>
+  Start:
+  {{input value=start}}
+</label>
+<label>
+  End:
+  {{input value=end}}
+</label>
